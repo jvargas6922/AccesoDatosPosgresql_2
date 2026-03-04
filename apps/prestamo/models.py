@@ -1,5 +1,5 @@
 from django.db import models
-from apps.negocio.models import Libro
+from apps.libro.models import Libro
 from apps.usuario.models import Usuario
 
 # Create your models here.

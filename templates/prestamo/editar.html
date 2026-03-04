@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}Editar Autor{% endblock %}
+{% block content %}
+<div class="container">
+    <h2 class="text-center">Editar Préstamo</h2>
+    <form method="POST" action="{% url 'actualizar_prestamo' prestamo.id_prestamo %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-success" type="submit">Actualizar</button>
+        <a href="{% url 'listado_prestamos' %}" class="btn btn-secondary">Volver</a>
+    </form>
+</div>
+{% endblock %}

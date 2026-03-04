@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}Listado de Préstamos{% endblock %}
+{% block content %}
+<div class="container">
+    <h1 class="text-center">Listado de Préstamos</h1>
+    <a href="{% url 'crear_prestamo' %}" class="btn btn-primary mb-3">Crear Préstamo</a>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Libro</th>
+                <th>Usuario</th>
+                <th>Fecha</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for prestamo in prestamos %}
+                <tr>
+                    <td>{{ prestamo.libro_id.nombre }}</td>
+                    <td>{{ prestamo.usuario_id.nombre_completo }}</td>
+                    <td>{{ prestamo.fecha }}</td>
+                    <td>
+                        <a href="{% url 'editar_prestamo' prestamo.id_prestamo %}" class="btn btn-warning btn-sm">Editar</a>
+                        <a href="{% url 'eliminar_prestamo' prestamo.id_prestamo %}" class="btn btn-danger btn-sm" onclick="return confirm('¿Estás seguro de que deseas eliminar este préstamo?');">Eliminar</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
