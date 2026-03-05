@@ -6,6 +6,10 @@ from .forms import LibroForm
 
 def listado_libros(request):
     libros = Libro.objects.all()
+    # libro = Libro.objects.get(id_libro=1)
+    # libro = Libro.objects.filter(nombre='IT')
+    # for l in libro:
+    #     print(l.nombre)
     return render(request, 'libro/listado.html', {'libros': libros})
 
 def crear(request):

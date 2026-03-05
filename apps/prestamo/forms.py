@@ -20,7 +20,7 @@ class PrestamoForm(forms.ModelForm):
             'usuario_id': 'Usuario',
         }
         widgets = {
-            'fecha': forms.DateInput(attrs={'class': 'form-control', 'type': 'date'}),
+            'fecha': forms.DateInput(attrs={'class': 'form-control', 'type': 'date'}, format='%Y-%m-%d'),
             'libro_id': forms.Select(attrs={'class': 'form-control'}),
             'usuario_id': forms.Select(attrs={'class': 'form-control'}),
         }

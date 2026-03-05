@@ -6,7 +6,7 @@ from .forms import PrestamoForm
 
 # Create your views here.
 def listado_prestamos(request):
-    prestamos = Prestamo.objects.all()
+    prestamos = Prestamo.objects.all().order_by('-created_at')  # Ordenar por fecha de creación en orden descendente
     return render(request, 'prestamo/listado.html', {'prestamos': prestamos})
 
 def crear(request):

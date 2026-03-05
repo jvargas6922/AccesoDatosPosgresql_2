@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}Listado de Autores{% endblock %}
+{% block content %}
+<div class="container">
+    <h1 class="text-center">Listado de Compras</h1>
+    <a href="{% url 'crear_compra' %}" class="btn btn-primary mb-3">Crear Compra</a>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Artículo</th>
+                <th>Valor</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for compra in compras %}
+                <tr>
+                    <td>{{ compra.articulo }}</td>
+                    <td>${{ compra.valor }}</td>
+                    <td>
+                        <a href="{% url 'editar_compra' compra.id_compra %}" class="btn btn-warning btn-sm">Editar</a>
+                        <a href="{% url 'eliminar_compra' compra.id_compra %}" class="btn btn-danger btn-sm" onclick="return confirm('¿Estás seguro de que deseas eliminar esta compra?');">Eliminar</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
