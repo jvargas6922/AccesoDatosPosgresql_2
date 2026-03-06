@@ -25,4 +25,5 @@ urlpatterns = [
     path('usuarios/', include('apps.usuario.urls')),
     path('prestamos/', include('apps.prestamo.urls')),
     path('negocio/', include('apps.negocio.urls')),
+    path('tienda/', include('apps.tienda.urls')),
 ]

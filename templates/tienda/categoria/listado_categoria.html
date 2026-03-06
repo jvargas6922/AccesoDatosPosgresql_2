@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}Listado de Categorías{% endblock %}
+{% block content %}
+<div class="container">
+    <h1 class="text-center">Listado de Categorías</h1>
+    <a href="{% url 'crear_categoria' %}" class="btn btn-primary mb-3">Crear Categoría</a>
+    <div class="row">
+        {% for categoria in categorias %}
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title text-center">{{ categoria.nombre_categoria }}</h5>
+                    <div class="text-center">
+                        <a href="{% url 'productos_por_categoria' categoria.id_categoria %}" class="btn btn-primary">Ver productos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
