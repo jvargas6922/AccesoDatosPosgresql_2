@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Compra
+from .models import Compra, Cliente
 from .forms import CompraForm
 
 # Create your views here.
@@ -43,3 +43,7 @@ def eliminar_compra(request, id_compra):
     compra = get_object_or_404(Compra, id_compra=id_compra)
     compra.delete()
     return redirect('listado_compras')
+
+def listado_clientes(request):
+    clientes = Cliente.objects.filter(deleted_at__isnull=True)
+    return render(request, 'cliente/listado.html', {'clientes': clientes})

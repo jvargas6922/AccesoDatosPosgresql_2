@@ -1,0 +1,111 @@
+[
+    {
+        "model": "tienda.producto",
+        "fields":{
+            "id_producto": 1,
+            "nombre_producto":"Pelota",
+            "precio": 10000,
+            "categoria": 1,
+            "created_at":"2026-03-05 20:39:39.024 -0300",
+            "updated_at":"2026-03-05 20:39:39.024 -0300",
+            "deleted_at":null
+        }
+    },
+    {
+        "model": "tienda.producto",
+        "fields":{
+            "id_producto": 2,
+            "nombre_producto":"Patines",
+            "precio": 50000,
+            "categoria": 1,
+            "created_at":"2026-03-05 20:39:39.024 -0300",
+            "updated_at":"2026-03-05 20:39:39.024 -0300",
+            "deleted_at":null
+            
+        }
+    },
+    {
+        "model": "tienda.producto",
+        "fields":{
+            "id_producto": 3,
+            "nombre_producto":"Secador de Cabello",
+            "precio": 50000,
+            "categoria": 3,
+            "created_at":"2026-03-05 20:39:39.024 -0300",
+            "updated_at":"2026-03-05 20:39:39.024 -0300",
+            "deleted_at":null
+        }
+    },
+    {
+        "model": "tienda.producto",
+        "fields":{
+            "id_producto": 4,
+            "nombre_producto":"Libreta",
+            "precio": 10000,
+            "categoria": 2,
+            "created_at":"2026-03-05 20:39:39.024 -0300",
+            "updated_at":"2026-03-05 20:39:39.024 -0300",
+            "deleted_at":null
+        }
+    },
+    {
+        "model": "tienda.producto",
+        "fields":{
+            "id_producto": 5,
+            "nombre_producto":"Libro",
+            "precio": 12000,
+            "categoria": 2,
+            "created_at":"2026-03-05 20:39:39.024 -0300",
+            "updated_at":"2026-03-05 20:39:39.024 -0300",
+            "deleted_at":null
+        }
+    },
+    {
+        "model": "tienda.producto",
+        "fields":{
+            "id_producto": 6,
+            "nombre_producto":"Maquina de Afeitar",
+            "precio": 30000,
+            "categoria": 4,
+            "created_at":"2026-03-05 20:39:39.024 -0300",
+            "updated_at":"2026-03-05 20:39:39.024 -0300",
+            "deleted_at":null
+        }
+    },
+    {
+        "model": "tienda.producto",
+        "fields":{
+            "id_producto": 7,
+            "nombre_producto":"Camisa",
+            "precio": 5000,
+            "categoria": 4,
+            "created_at":"2026-03-05 20:39:39.024 -0300",
+            "updated_at":"2026-03-05 20:39:39.024 -0300",
+            "deleted_at":null
+        }
+    },
+    {
+        "model": "tienda.producto",
+        "fields":{
+            "id_producto": 8,
+            "nombre_producto":"Mouse",
+            "precio": 11000,
+            "categoria": 6,
+            "created_at":"2026-03-05 20:39:39.024 -0300",
+            "updated_at":"2026-03-05 20:39:39.024 -0300",
+            "deleted_at":null
+        }
+    },
+    {
+        "model": "tienda.producto",
+        "fields":{
+            "id_producto": 9,
+            "nombre_producto":"Pantalla",
+            "precio":100000 ,
+            "categoria": 6,
+            "created_at":"2026-03-05 20:39:39.024 -0300",
+            "updated_at":"2026-03-05 20:39:39.024 -0300",
+            "deleted_at":null
+        }
+    }
+]

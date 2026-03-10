@@ -43,5 +43,9 @@ class Producto(models.Model):
         self.deleted_at = timezone.now()
         self.save()
 
+    def restore(self):
+        self.deleted_at = None
+        self.save()
+
     def __str__(self):
         return self.nombre_producto

@@ -1,6 +1,7 @@
 from django.db import models
 from apps.libro.models import Libro
 from apps.usuario.models import Usuario
+from django.utils import timezone
 
 # Create your models here.
 class Prestamo(models.Model):
@@ -19,6 +20,14 @@ class Prestamo(models.Model):
     class Meta:
         managed = False
         db_table = 'prestamos'
+
+    def delete(self):
+        self.deleted_at = timezone.now()
+        self.save()
+
+    def restore(self):
+        self.deleted_at = None
+        self.save()
     
     def __str__(self):
         return f"Prestamo de {self.libro_id.nombre} a {self.usuario_id.nombre_completo}"

@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 # Create your models here.
 class Usuario(models.Model):
@@ -18,6 +19,14 @@ class Usuario(models.Model):
     class Meta:
         managed = False
         db_table = 'usuarios'
+
+    def delete(self):
+        self.deleted_at = timezone.now()
+        self.save()
+
+    def restore(self):
+        self.deleted_at = None
+        self.save()
     
     def __str__(self):
         return self.nombre_completo

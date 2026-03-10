@@ -12,12 +12,18 @@
             </tr>
         </thead>
         <tbody>
+            {% if not productos %}
+            <tr>
+                <td colspan="4" class="text-center">No hay productos disponibles.</td>
+            </tr>
+            {% else %}
             {% for producto in productos %}
-                <tr>
-                    <td>{{ producto.nombre_producto }}</td>
-                    <td>{{ producto.precio }}</td>
-                </tr>
+            <tr>
+                <td>{{ producto.nombre_producto }}</td>
+                <td>{{ producto.precio }}</td>
+            </tr>
             {% endfor %}
+            {% endif %}
         </tbody>
     </table>
 </div>
